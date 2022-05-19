@@ -10,7 +10,8 @@
   */
 int _printf(const char *format, ...)
 {
-	int i, len_format = 0;
+	int i, len_format = 0, charptr;
+	int *num = &charptr;
 	char *str;
 
 	va_list args;
@@ -24,19 +25,20 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == 'c')
 		{
-			printf("%c", va_arg(args, int));
+			charptr = va_arg(args, int);
+			fprintf(stdout, (char *) num);
 		}
 
 		else if (format[i] == 's')
 		{
 			str = va_arg(args, char *);
-			printf("%s", str);
+			fprintf(stdout, str);
 		}
 
 
 		else if (format[i] == '%')
 		{
-			printf("%%");
+			fprintf(stdout, "%%");
 		}
 
 		else
@@ -44,4 +46,6 @@ int _printf(const char *format, ...)
 	}
 
 	return (len_format);
+
+	va_end(args);
 }
