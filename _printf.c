@@ -10,11 +10,15 @@
   */
 int _printf(const char *format, ...)
 {
-	int i, len_format = 0;
+	int i, len_format = 0, charptr;
+	int *num = &charptr;
+	char *ch = (char *)num;
+	char *str;
 
 	va_list args;
 
 	va_start(args, format);
+	vprintf(format, args);
 
 	while (format[len_format])
 		len_format++;
@@ -23,30 +27,26 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == 'c')
 		{
-			va_arg(args, int);
-			len_format++;
-			continue;
+			charptr = va_arg(args, int);
+			fprintf(stdout, ch);
 		}
 
 		else if (format[i] == 's')
 		{
 			str = va_arg(args, char *);
-			len_format++;
-			continue;
+			fprintf(stdout, str);
 		}
 
 
 		else if (format[i] == '%')
 		{
-			len_format++;
-			continue;
+			fprintf(stdout, "%%");
 		}
 
 		else
 			break;
 	}
 
-	return (len_format);
-
+	return (len_format - 1);
 	va_end(args);
 }
