@@ -18,7 +18,6 @@ int _printf(const char *format, ...)
 	va_list args;
 
 	va_start(args, format);
-	vprintf(format, args);
 
 	while (format[len_format])
 		len_format++;
