@@ -3,19 +3,17 @@
 #include "main.h"
 /**
 * _printf - all logic for the printf project.
-* @*format - string specifier formats.
+* @format: string specifier formats.
 *
 * Return: The length(char_num++).
 */
-
 int _printf(const char *format, ...)
 {
 	va_list ap;
 	unsigned int i = 0, char_num = 0;
-
+	
 	if (!format)
 		return (-1);
-
 	va_start(ap, format);
 	for (i = 0; format[i] != '\0'; i++)
 	{
@@ -45,6 +43,7 @@ int _printf(const char *format, ...)
 			_putchar(format[i]);
 			char_num++;
 		}
-		return (char_num);
-		va_end(ap);
+	}
+	return (char_num);
+	va_end(ap);
 }
