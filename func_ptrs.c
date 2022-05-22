@@ -1,13 +1,13 @@
+#include <stdio.h>
 #include <stdarg.h>
 #include <stddef.h>
 #include "main.h"
-
 /**
-  * func - pointer to functions va_list.
-  * @chars: pointer to chars.
-  *
-  * Return: ALWAYS ZERO.
-  */
+* func - pointer to functions va_list.
+* @chars: pointer to chars.
+*
+* Return: ALWAYS ZERO.
+*/
 int(*func(const char chars))(va_list)
 {
 	print_func(arr[]) = {
@@ -27,6 +27,5 @@ int(*func(const char chars))(va_list)
 			return (arr[i].func_ptr);
 		}
 	}
-
 	return (0);
 }

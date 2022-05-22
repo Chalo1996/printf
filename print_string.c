@@ -2,9 +2,9 @@
 #include "main.h"
 #include <stdlib.h>
 #include <unistd.h>
-
+#include <stdio.h>
 /**
- * print_string - Print string
+ * print_string - Print a string
  * @s: va_list
  *
  * Return: The character otherwise (NULL)
