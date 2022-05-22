@@ -1,21 +1,20 @@
 #include <stdarg.h>
 #include <stddef.h>
+#include <stdio.h>
 #include "main.h"
-
 /**
-  * _printf - all logic for the printf project.
-  * @format: string specifier formats.
-  *
-  * Return: The length(char_num++).
-  */
+* _printf - all logic for the printf project.
+* @format: string specifier formats.
+*
+* Return: Gives The length(char_num++).
+*/
 int _printf(const char *format, ...)
 {
 	va_list ap;
 	unsigned int i = 0, char_num = 0;
-
+	
 	if (!format)
 		return (-1);
-
 	va_start(ap, format);
 	for (i = 0; format[i] != '\0'; i++)
 	{
@@ -23,7 +22,6 @@ int _printf(const char *format, ...)
 		{
 			if (format[i + 1] == '\0')
 				return (-1);
-
 			else if (format[i + 1] == '%')
 			{
 				_putchar('%');
@@ -48,6 +46,5 @@ int _printf(const char *format, ...)
 		}
 	}
 	return (char_num);
-
 	va_end(ap);
 }
