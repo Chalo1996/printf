@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdarg.h>
 #include <stdio.h>
+#include <ctype.h>
 
 /**
   * _printf - produces outoput according to a format.
