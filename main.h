@@ -6,7 +6,7 @@
 /**
  * struct types - specifier structure for printf
  * @ch: pointer to char specifiers
- * @func_ptr : pointer to va_list functuions.
+ * @func_ptr: pointer to va_list functuions.
  *
  */
 typedef struct types
