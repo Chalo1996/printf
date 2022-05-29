@@ -40,47 +40,48 @@ $ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c
     Our main files will include your main header file (main.h): #include main.h
     You might want to look at the gcc flag -Wno-format when testing with your _printf and the standard printf. Example of test file that you could use:
     
-    #include <limits.h>
-#include <stdio.h>
-#include "main.h"
+    
+#include <limits.h></br>
+#include <stdio.h></br>
+#include "main.h"</br>
 
-/**
- * main - Entry point
- *
- * Return: Always 0
- */
-int main(void)
-{
-    int len;
-    int len2;
-    unsigned int ui;
-    void *addr;
+/**</br>
+ * main - Entry point</br>
+ *</br>
+ * Return: Always 0</br>
+ */</br>
+int main(void)</br>
+{</br>
+    int len;</br>
+    int len2;</br>
+    unsigned int ui;</br>
+    void *addr;</br>
 
-    len = _printf("Let's try to printf a simple sentence.\n");
-    len2 = printf("Let's try to printf a simple sentence.\n");
-    ui = (unsigned int)INT_MAX + 1024;
-    addr = (void *)0x7ffe637541f0;
-    _printf("Length:[%d, %i]\n", len, len);
-    printf("Length:[%d, %i]\n", len2, len2);
-    _printf("Negative:[%d]\n", -762534);
-    printf("Negative:[%d]\n", -762534);
-    _printf("Unsigned:[%u]\n", ui);
-    printf("Unsigned:[%u]\n", ui);
-    _printf("Unsigned octal:[%o]\n", ui);
-    printf("Unsigned octal:[%o]\n", ui);
-    _printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
-    printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
-    _printf("Character:[%c]\n", 'H');
-    printf("Character:[%c]\n", 'H');
-    _printf("String:[%s]\n", "I am a string !");
-    printf("String:[%s]\n", "I am a string !");
-    _printf("Address:[%p]\n", addr);
-    printf("Address:[%p]\n", addr);
-    len = _printf("Percent:[%%]\n");
-    len2 = printf("Percent:[%%]\n");
-    _printf("Len:[%d]\n", len);
-    printf("Len:[%d]\n", len2);
-    _printf("Unknown:[%r]\n");
-    printf("Unknown:[%r]\n");
-    return (0);
-}
+    len = _printf("Let's try to printf a simple sentence.\n");</br>
+    len2 = printf("Let's try to printf a simple sentence.\n");</br>
+    ui = (unsigned int)INT_MAX + 1024;</br>
+    addr = (void *)0x7ffe637541f0;</br>
+    _printf("Length:[%d, %i]\n", len, len);</br>
+    printf("Length:[%d, %i]\n", len2, len2);</br>
+    _printf("Negative:[%d]\n", -762534);</br>
+    printf("Negative:[%d]\n", -762534);</br>
+    _printf("Unsigned:[%u]\n", ui);</br>
+    printf("Unsigned:[%u]\n", ui);</br>
+    _printf("Unsigned octal:[%o]\n", ui);</br>
+    printf("Unsigned octal:[%o]\n", ui);</br>
+    _printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);</br>
+    printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);</br>
+    _printf("Character:[%c]\n", 'H');</br>
+    printf("Character:[%c]\n", 'H');</br>
+    _printf("String:[%s]\n", "I am a string !");</br>
+    printf("String:[%s]\n", "I am a string !");</br>
+    _printf("Address:[%p]\n", addr);</br>
+    printf("Address:[%p]\n", addr);</br>
+    len = _printf("Percent:[%%]\n");</br>
+    len2 = printf("Percent:[%%]\n");</br>
+    _printf("Len:[%d]\n", len);</br>
+    printf("Len:[%d]\n", len2);</br>
+    _printf("Unknown:[%r]\n");</br>
+    printf("Unknown:[%r]\n");</br>
+    return (0);</br>
+}</br>
