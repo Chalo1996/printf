@@ -43,24 +43,25 @@ $ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c
     Our main files will include your main header file (main.h): #include main.h
     You might want to look at the gcc flag -Wno-format when testing with your _printf and the standard printf. Example of test file that you could use:
     
-    
-#include <limits.h></br>
-#include <stdio.h></br>
-#include "main.h"</br>
+  ```
+#include <limits.h>
+#include <stdio.h>
+#include "main.h"
 
 ``` 
-/**</br>
-  *main - Entry point</br>
+```
+/**
+  *main - Entry point
   *
-  */Return: Always 0</br>
+  */Return: Always 0
   ```
   ```
-int main(void)</br>
+int main(void)
 {
-    int len;</br>
-    int len2;</br>
-    unsigned int ui;</br>
-    void *addr;</br>
+    int len;
+    int len2;
+    unsigned int ui;
+    void *addr;
 
     len = _printf("Let's try to printf a simple sentence.\n");
     len2 = printf("Let's try to printf a simple sentence.\n");
