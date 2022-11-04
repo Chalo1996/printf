@@ -48,11 +48,12 @@ $ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c
 #include <stdio.h></br>
 #include "main.h"</br>
 
+``` 
 /**</br>
   *main - Entry point</br>
   *
   */Return: Always 0</br>
-  
+  ```
 int main(void)</br>
 {</br>
     int len;</br>
