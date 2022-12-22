@@ -2,7 +2,7 @@
 ---
 ---
 ### Prerequisites:
-#### Requirements:</br>
+#### Requirements:
 ##### General
 
     Allowed editors: vi, vim, emacs
