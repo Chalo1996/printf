@@ -1,6 +1,5 @@
 # Printf Project
 ---
----
 ### Prerequisites:
 #### Requirements:
 ##### General
